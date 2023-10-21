@@ -27,7 +27,7 @@ class PlatformInfo {
     required String userAgent,
     required String paystackBuild,
     required String deviceId,
-  })   : userAgent = userAgent,
+  })  : userAgent = userAgent,
         paystackBuild = paystackBuild,
         deviceId = deviceId;
 

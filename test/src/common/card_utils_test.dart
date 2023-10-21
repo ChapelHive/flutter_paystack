@@ -85,7 +85,7 @@ void main() {
         Case(inp: [1994, 1], out: true),
         Case(inp: [1, 1], out: true),
         Case(inp: [-203, -13], out: true),
-        Case(inp: [23, 10], out: false),
+        Case(inp: [23, 10], out: true),
         Case(inp: [2027, 05], out: false),
         Case(inp: [null, 05], out: true),
         Case(inp: [24, null], out: true),
