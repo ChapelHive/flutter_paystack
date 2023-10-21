@@ -5,18 +5,18 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   const MethodChannel channel =
-      MethodChannel('plugins.wilburt/flutter_paystack');
+  MethodChannel('plugins.wilburt/flutter_paystack');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
+  setUpAll(() {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, (MethodCall methodCall) async {
       return '';
     });
   });
 
-  tearDown(() {
-    channel.setMockMethodCallHandler(null);
+  tearDownAll(() {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
   });
 
   group("$Utils", () {
